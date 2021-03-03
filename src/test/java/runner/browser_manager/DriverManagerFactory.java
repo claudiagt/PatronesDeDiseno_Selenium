@@ -1,7 +1,5 @@
 package runner.browser_manager;
 
-import java.sql.DriverManager;
-
 public class DriverManagerFactory {
 
     public static DriverManager getManager(DriverType type) {
@@ -14,7 +12,7 @@ public class DriverManagerFactory {
                 break;
 
             case FIREFOX:
-                driverManager = new FireFoxDrivermanager();
+                driverManager = new FirefoxDriverManager();
                 break;
 
             default:
@@ -22,5 +20,8 @@ public class DriverManagerFactory {
                 break;
         }
 
+        return driverManager;
+
     }
+
 }
